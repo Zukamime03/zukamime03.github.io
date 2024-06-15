@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ikasi Solution | Kaspersky Products</title>
+    <!-- web-fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,500"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- off-canvas -->
+    <link href="../css/mobile-menu.css" rel="stylesheet" />
+    <!-- font-awesome -->
+    <link
+      href="../fonts/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="icon" href="../img/ikasi_logo.png" type="image/x-icon" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      body,
+      h1,
+      p,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: Arial, sans-serif;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1px;
+      }
+
+      .prod-intro {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .prod-intro h1 {
+        padding: 1%;
+      }
+
+      .prod-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 35%;
+        padding-left: 10px;
+      }
+
+      .prod-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: calc(30% - 20px);
+        text-align: center;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        height: 400px;
+      }
+
+      .prod-card img {
+        border-radius: 10px 10px 0 0;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .prod-card h2 {
+        color: #3cba54;
+        font-size: 1.5em;
+        margin: 15px 0 10px;
+      }
+
+      .prod-card p {
+        color: #555;
+        font-size: 1em;
+      }
+
+      .prod-card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+      }
+      .navbar-default .navbar-nav > .active > a,
+      .navbar-default .navbar-nav > .active > a:focus,
+      .navbar-default .navbar-nav > .active > a:hover {
+        color: #ffffff;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+      }
+
+      .prod-card .prod-popup-text {
+        visibility: hidden;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        width: 200px;
+        text-align: center;
+        transition: visibility 0.3s ease;
+      }
+
+      .prod-card:hover .prod-popup-text {
+        visibility: visible;
+      }
+
+      .prod-quick-links {
+        width: 20%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      aside.prod-quick-links h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #3cba54;
+      }
+
+      aside.prod-quick-links ul {
+        list-style: none;
+      }
+
+      aside.prod-quick-links ul li {
+        margin-bottom: 10px;
+      }
+
+      aside.prod-quick-links ul li a {
+        color: #3cba54;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+
+      aside.prod-quick-links ul li a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .prod-container {
+          width: 100%;
+        }
+        .prod-card {
+          width: calc(100% - 20px);
+        }
+        .prod-quick-links {
+          width: 100%;
+        }
+      }
+
+      #prod-Illustration {
+        height: 150px;
+        width: 400px;
+        padding: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <!-- Page Preloader -->
+      <div id="preloader">
+        <div id="status">
+          <div class="status-mes"></div>
+        </div>
+      </div>
+
+      <div class="uc-mobile-menu-pusher">
+        <div class="content-wrapper">
+          <nav
+            style="background-color: #333333 !important"
+            class="navbar m-menu navbar-default navbar-fixed-top"
+          >
+            <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-collapse-1"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"
+                  ><img src="../img/logo.png" alt=""
+                /></a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right main-nav">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../about.html">About</a></li>
+                  <li class="active"><a href="../services.html">Services</a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+                  <li><a href="../Blog.html">News</a></li>
+                  <li class="dropdown m-menu-fw">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"
+                      >Vendors <span><i class="fa fa-angle-down"></i></span
+                    ></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="m-menu-content">
+                          <ul class="col-sm-3">
+                            <li class="dropdown-header">Communication</li>
+                            <li><a href="#">Dell technologies</a></li>
+                            <li><a href="#">Hewlett Packard Enterprise</a></li>
+                            <li><a href="#">Solar winds</a></li>
+                            <li><a href="#">NetSheild</a></li>
+                            <li><a href="#">Huawei</a></li>
+                          </ul>
+                          <ul class="col-sm-3">
+                            <li class="dropdown-header">Cloud</li>
+                            <li><a href="#">SYNAQ</a></li>
+                            <li><a href="#">Adobe</a></li>
+                            <li><a href="#">Microsoft Office 365</a></li>
+                            <li><a href="#">Huawei</a></li>
+                          </ul>
+                          <ul class="col-sm-3">
+                            <li class="dropdown-header">Security</li>
+                            <li>
+                              <a href="Kaspersky.html">Kaspersky</a>
+                            </li>
+                            <li><a href="Sophos.html">Sophos</a></li>
+                            <li><a href="#">CheckPoint</a></li>
+                            <li><a href="#">VeeAm</a></li>
+                            <li><a href="#">Huawei</a></li>
+                          </ul>
+                          <ul class="col-sm-3">
+                            <li class="dropdown-header">Networking</li>
+                            <li><a href="#">Sophos</a></li>
+                            <li><a href="#">Cisco</a></li>
+                            <li><a href="#">NetSheild</a></li>
+                            <li><a href="#">Solar winds</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Hewlett Packard Enterprise</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- .navbar-collapse -->
+            </div>
+            <!-- .container -->
+          </nav>
+          <!-- .nav -->
+          <section class="about-text ptb-100">
+            <section class="section-title">
+              <div id="prod-main">
+                <div class="prod-main-text">
+                  <main>
+                    <section class="prod-intro">
+                      <img
+                        id="prod-Illustration"
+                        src="../img/karspersky product Icons/Asset_1.png"
+                        alt="Product Pages Illustration"
+                      />
+                      <h1>Product Page</h1>
+                      <p>
+                        This page helps you quickly choose the right Kaspersky
+                        solutions, products, and services. It also offers
+                        partner-ready materials for each item to make your sales
+                        of Kaspersky products easier and more beneficial.
+                      </p>
+                    </section>
+
+                    <div class="prod-container">
+                      <div class="prod-card">
+                        <img
+                          height="100px"
+                          width="100px"
+                          src="../Img/karspersky product Icons/k_EDR_Expert_black_icon.png"
+                          alt="Kaspersky EDR Expert"
+                        />
+                        <h2>Kaspersky EDR Expert</h2>
+                        <p>
+                          Kaspersky EDR Expert enables the ongoing monitoring
+                          and visualization of every investigative stage, with
+                          fast access to data if compromised workstations are
+                          inaccessible or if data has been encrypted by hackers.
+                          Threat hunting, IoC scanning and IoA mapping, as well
+                          as detailed analysis and built-in event correlation,
+                          come together to help security specialists understand
+                          the entire sequence of intruder actions, so they can
+                          then apply the most effective response actions.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://youtu.be/c3vjJ969uo0?si=szMIdRH9DUmuP8A0"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Kaspersky Next_.svg"
+                          alt="Kaspersky Next"
+                        />
+                        <h2>Kaspersky NEXT</h2>
+                        <p>
+                          Kaspersky Next is a new line of cybersecurity products
+                          that includes robust endpoint protection powered by AI
+                          capabilities and goes beyond the classic EPP (Endpoint
+                          Protection Platform), bringing together EDR and XDR
+                          for corporate customers of any size and industry. As
+                          the most advanced and effective cybersecurity
+                          solutions, EDR and XDR help companies to withstand the
+                          more prevalent, evasive, and sophisticated attacks,
+                          providing businesses with total visibility, control,
+                          rapid response and proactive threat hunting.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://www.kaspersky.co.za/about/press-releases/2024_meet-kaspersky-next-new-flagship-product-line-for-business"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/EDR Optimum_black.svg"
+                          alt="Kaspersky Next EDR Optimum"
+                        />
+                        <h2>Kaspersky Next EDR Optimum</h2>
+                        <p>
+                          Kaspersky Next EDR Optimum provides essential EDR
+                          functionality and paves the way for future XDR
+                          adoption. It includes strong endpoint protection,
+                          improved controls, training, patch management and more
+                          – all enhanced by indispensable EDR functionality.
+                          Threat visibility, investigation and response are
+                          simple, quick and guided to help deflect attacks
+                          rapidly with minimal call on your resources.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://www.kaspersky.co.za/next-edr-optimum"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          height="100px"
+                          width="100px"
+                          src="../Img/karspersky product Icons/k_Extended_Detection_and_Response_black_icon.svg"
+                          alt="XDR"
+                        />
+                        <h2>Kaspersky XDR</h2>
+                        <p>
+                          It delivers deep insights into evolving cyberthreats
+                          targeting your business, and its scalable architecture
+                          adapts effortlessly to your needs, ensuring continuous
+                          protection for your critical assets. Kaspersky XDR’s
+                          unmatched security measures, including advanced threat
+                          detection and automated response actions, provide the
+                          ultimate solution for securing your organization’s
+                          digital assets – today and in the future.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://www.kaspersky.co.za/enterprise-security/xdr"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Kaspersky Security for Microsoft Office 365.png"
+                          alt="Next EDR Optimum"
+                        />
+                        <h2>Kaspersky Security for Microsoft Office 365</h2>
+                        <p>
+                          Kaspersky Security for Microsoft Oﬀice 365 is the #1
+                          choice when it comes to protecting your cloud-oriented
+                          enterprise communication and collaboration apps -
+                          (Exchange Online, OneDrive, SharePoint Online and
+                          Teams) - from known and unknown cyberthreats.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://youtu.be/nbJug3XiZGk"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Endpoint Security for Business.png"
+                          alt="KES for Business"
+                        />
+                        <h2>Kaspersky Endpoint Security For Business</h2>
+                        <p>
+                          Win every deal with unmatched product flexibility, and
+                          earn complete customer loyalty with the best
+                          protection in the industry. This Product delivers the
+                          best protection for medium and large business, with
+                          flexible deployment, intelligent reporting and minimal
+                          false alarms
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://www.kaspersky.co.za/small-to-medium-business-security/total"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Kaspersky_Endpoint_Security_Cloud.png"
+                          alt="KES Cloud"
+                        />
+                        <h2>Kaspersky Endpoint Security cloud</h2>
+                        <p>
+                          Kaspersky Endpoint Security Cloud offers small and
+                          medium sized businesses effortless and complete
+                          cloud-delivered protection against known and unknown
+                          threats – including ransomware and other attacks.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href="https://youtu.be/-EJomdreqlk"
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Kaspersky_Embedded_Systems_Security.png"
+                          alt="Embedded systems Security"
+                        />
+                        <h2>Kaspersky Embedded Systems Security</h2>
+                        <p>
+                          A unified security solution for a new era of digital
+                          transformation
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href=""
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Kaspersky Industrial Cybersecurity.png"
+                          alt="Industrial Cybersecurity"
+                        />
+                        <h2>Kaspersky Industrial cybersecurity</h2>
+                        <p>
+                          As threats targeting industrial infrastructure
+                          increase, choosing the right advisor and technology
+                          partner to secure your systems has never been more
+                          important.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href=""
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          height="35%"
+                          width="35%"
+                          src="../Img/karspersky product Icons/k_Container_Security_black_icon.svg"
+                          alt="Container Security"
+                        />
+                        <h2>Kaspersky Container Security</h2>
+                        <p>
+                          The best choice to secure your container environment
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href=""
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Kaspersky Hybrid Cloud Security.png"
+                          alt="hybrid cloud security"
+                        />
+                        <h2>Kaspersky Hybrid cloud Security</h2>
+                        <p>
+                          Proven cloud-native protection and the best
+                          performance for hybrid environments.
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href=""
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                      <div class="prod-card">
+                        <img
+                          src="../Img/karspersky product Icons/Sandbox.png"
+                          alt="sandbox"
+                        />
+                        <h2>Kaspersky Sandbox</h2>
+                        <p>
+                          Advanced protection against new and targeted malware
+                          without expensive security experts and tools
+                        </p>
+                        <div class="prod-popup-text">
+                          <p style="color: white">
+                            Click
+                            <a
+                              rel="noopener"
+                              target="_blank"
+                              href=""
+                              class="open-video"
+                              >Here</a
+                            >
+                            to learn more
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </main>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <footer class="footer">
+            <!-- Footer Widget Section -->
+            <div class="footer-widget-section">
+              <div class="container text-center">
+                <div class="row">
+                  <h3 style="padding: 20px; color: lightgray">Branches</h3>
+
+                  <div class="address-row">
+                    <div class="address-column">
+                      <h2 style="color: lightgray; font-size: 5pxks">
+                        Brakpan Office
+                      </h2>
+                      <p>133b Springs Road</p>
+                      <p>Vulcania</p>
+                      <p>Brakpan</p>
+                      <p>1549</p>
+                    </div>
+                    <div class="address-column">
+                      <h2 style="color: lightgray; font-size: 5pxks">
+                        Kwa-Thema Office
+                      </h2>
+                      <p>3 MASEKELA STREET</p>
+                      <p>Kwa-Thema</p>
+                      <p>1575</p>
+                      <p></p>
+                    </div>
+                    <div class="address-column">
+                      <h2 style="color: lightgray; font-size: 5pxks">
+                        Free State Branch
+                      </h2>
+                      <p>40 Ernest street</p>
+                      <p>Riebeeckstad SP</p>
+                      <p>Riebeeckstad</p>
+                      <p>Free state, 4959</p>
+                    </div>
+                    <div class="address-column">
+                      <h2 style="color: lightgray; font-size: 5pxks">
+                        KwaZulu-Natal Branch
+                      </h2>
+                      <p>13 Braemar Ave</p>
+                      <p>La Lucia</p>
+                      <p>Umhlanga</p>
+                      <p>KwaZulu-Natal, 4051</p>
+                    </div>
+                    <div class="address-column">
+                      <h2 style="color: lightgray; font-size: 5pxks">
+                        Limpopo Branch
+                      </h2>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 footer-block last">
+                    <div class="footer-widget widget_text">
+                      <address>
+                        Contact US <br />
+                        TEL: (011) 743 3001 or (011) 736-3111 <br />
+                        ALT NO: 083 416 2645 <br />
+                        Send an Email on
+                        <a href="mailto:Info@ikasisolutions.co.za"
+                          >Info@ikasisolutions.co.za</a
+                        ><br />
+                      </address>
+
+                      <ul class="list-inline social-links">
+                        <li>
+                          <a
+                            rel="noopener"
+                            target="_blank"
+                            href="https://www.facebook.com/ikasisolutions/"
+                            ><i class="fa fa-facebook"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noopener"
+                            target="_blank"
+                            href="https://x.com/ikasi_solutions"
+                            ><i class="fa fa-twitter"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noopener"
+                            target="_blank"
+                            href="https://www.instagram.com/ikasisolutions"
+                            ><i class="fa fa-instagram"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noopener"
+                            target="_blank"
+                            href="https://www.linkedin.com/in/ikasi-solutions-347014190/"
+                            ><i class="fa fa-linkedin"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- /.col-sm-4 -->
+                </div>
+              </div>
+            </div>
+            <!-- /.Footer Widget Section -->
+
+            <div class="copyright-section">
+              <div class="container clearfix">
+                <span class="copytext"
+                  >&copy; Ikasi Solutions. All rights reserved. | Modified By:
+                  <a href="#">Crypto and Zukamime</a></span
+                >
+
+                <ul class="list-inline pull-right">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../about.html">About</a></li>
+                  <li class="active">
+                    <a href="../services.html">Services</a>
+                  </li>
+                  <li><a href="../Blog.html">News</a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <!-- .container -->
+            </div>
+            <!-- .copyright-section -->
+          </footer>
+          <!-- .footer -->
+        </div>
+        <!-- .content-wrapper -->
+      </div>
+      <!-- .offcanvas-pusher -->
+
+      <div class="uc-mobile-menu uc-mobile-menu-effect">
+        <button
+          type="button"
+          class="close"
+          aria-hidden="true"
+          data-toggle="offcanvas"
+          id="uc-mobile-menu-close-btn"
+        >
+          &times;
+        </button>
+        <div>
+          <div>
+            <ul id="menu">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Services</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- .uc-mobile-menu -->
+    </div>
+    <!-- #main-wrapper -->
+
+    <section>
+      <div class="back-marquee">
+          <div class="marquee-content">
+              <img src="../img/karspersky product Icons/Asset_1.png" alt="Logo 1">
+              <img src="../img/logo-client-2.png" alt="Logo 1">
+              <img src="../img/logo-client-6.png" alt="Logo 4">
+              <img src="../img/logo-client-4.png" alt="Logo 3">
+              <img src="../img/logo-client-5.png" alt="Logo 4">
+              <img src="../img/logo-client-3.png" alt="Logo 2">
+              <!-- Add more logos as needed -->
+          </div>
+      </div>
+    </section>
+
+    <!-- Script -->
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/flexSlider/jquery.flexslider-min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

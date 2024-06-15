@@ -1,284 +1,449 @@
 <!DOCTYPE html>
-<html lang="us">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Ikasi Solutions | IkasiSolutions</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="stylesheet" href="./assets/Ministyle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="Images/ikasi_logo.png" type="image/x-icon" />
-  </head>
+<html lang="en">
 
-  <body class="top">
-    <!--Menu bar links-->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
-      <a href="index.html">Home</a>
-      <a href="About us.html">About Us</a>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ikasi Solutions | Home Page</title>
+    <!-- web-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <link  href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- off-canvas -->
+    <link href="css/mobile-menu.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="./img/ikasi_logo.png" type="image/x-icon">
 
-      <button class="dropdown-btn">
-        Solutions
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="./Solutions/communication.html">Communication</a>
-        <a href="./Solutions/Cloud.html">Cloud</a>
-        <a href="./Solutions/Security.html">Security</a>
-        <a href="./Solutions/Networking.html">Networking</a>
-      </div>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 
-      <a href="Vendors.html">Vendors</a>
-      <a href="Contact us.html">Contact Us</a>
-    </div>
-
-    <div class="banner-container">
-      <a href="index.html"
-        ><img src="./Images/cropped-Ikasi-solution.jpg" alt="Cropped"
-      /></a>
-
-      <!-- Used to open the sidenav -->
-      <div class="container" onclick="myFunction(this),openNav()">
-        <div id="menu-bar" class="bar"></div>
-        <div id="menu-bar" class="bar"></div>
-        <div id="menu-bar" class="bar"></div>
-      </div>
-    </div>
-
-    <div id="main">
-      <div id="content">
-        <h3 class="welcome-banner">Home</h3>
-
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <a href="https://www.kaspersky.co.za/home-security">
-              <img
-                src="./Images/Kaspersky-banner-one-735x275.png"
-                style="width: 100%"
-              />
-            </a>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <a href="https://www.kaspersky.co.za/home-security">
-              <img
-                src="./Images/Kaspersky-banner-two-735x275.png"
-                style="width: 100%"
-              />
-            </a>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <a href="https://www.kaspersky.co.za/home-security">
-              <img
-                src="./Images/Kaspersky-banner-three-735x275.png"
-                style="width: 100%"
-              />
-            </a>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <a href="https://www.kaspersky.co.za/enterprise-security">
-              <img
-                src="./Images/Kaspersky-banner-four-735x275.png"
-                style="width: 100%"
-              />
-            </a>
-          </div>
-
-          <!--
-            Next and previous buttons
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<body>
+    <div id="main-wrapper">
+        <!-- Page Preloader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="status-mes"></div>
             </div>
-            <br />
-            -->
-
-          <!-- The dots/circles -->
-
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
         </div>
 
-        <div class="main-text">
-          <p class="para">
-            Ikasi Solutions is the leading solutions provider of Converged
-            Communication Solutions; focusing on tailoring Voice, Security,
-            Storage and Power Solutions. by forging partnerships with the
-            leading national and international vendors, Ikasi SOlutions is able
-            to deliver relavant solutions to its customers. it provides best of
-            breed networking technology products from leading Vendors Such as
-            CISCO, Sophos, Hewlett Packard enterprise, Netshield, Huawei, Adobe,
-            microsoft among others. Click <a href="Vendors.html">here</a> to see
-            more about the vendors that we are currently parnered with.<br />
-            <br />
-            We have extensive expertise in the convergence of Voice, data and
-            technologies, including Voice over internet Protocol(VOIP),
-            Security, Remote Access, Virtual Private Networks(VPNs) and Wireless
-            Connectivity.<br />
-            <br />
-            We also serve as a trusted advisor offering technical expertise in
-            the form of pre- and post sales technical consulting, leasing
-            logistics services, sales support and incentive programmes, whilst
-            being a conduit to new technologies and market Opportunities.<br />
-            <br />
-            We as an organisation are focused on delivering highly effective
-            Network Security Solutions, ensuring secure and reliable
-            communications over a network and between networks. By investing in
-            relationships with the industry’s leading security vendors, Ikasi
-            Solutions offers effective security solutions for wired networks,
-            wireless networks and IP devices.
-          </p>
-        </div>
-<div class="award-container">
-   <div class="image-text-block" data-aos="fade-left" data-aos-duration="1000">
-          
-            <img src="./Images/sophos-synchro.jpg" alt="Sophos Synchro award" />
-            <div class="text-div">
-              <p id="award-text">
-                Awarded by SOPHOS For Synchronized Security Partner Of the year
-              </p>
-            </div>
-          
-        </div>
+        <div class="uc-mobile-menu-pusher">
 
-</div>
-<div class="award-container">
-  <div class="image-text-block" data-aos="fade-right" data-aos-duration="1000">
-          <a
-            href="https://partnernews.sophos.com/en-us/2021/06/partner-program/sophos-2021-africa-cis-partner-award-winners/"
-          >
-            <img
-              id="edu"
-              src="./Images/sophos-edu.jpg"
-              alt="Sophos Education award"
-            />
-          </a>
-          <div class="text-div">
-            <p id="award-text">
-              Awarded by SOPHOS For Education Partner of the Year in South
-              Africa, 2021
-            </p>
-          </div>
-        </div>
-</div>
-       
-        
-      </div>
-    </div>
+            <div class="content-wrapper">
+                <nav class="navbar m-menu navbar-default navbar-fixed-top">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html"><img id="pic-logo" style="height: 200px; width: 250px;" src="img/logo-bagl.png"
+                                    alt="Ikasi-Solutions-Logo"></a>
+                        </div>
 
-    <script src="./assets/function.js" async defer></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
 
-  <!-- footer -->
-  <footer>
-    <div id="contact" class="footer">
-      <div class="footer-container">
-        <div class="row pdn-top-30">
-          <div class="col-md-12">
-            <div class="footer-box">
-              <div class="headinga">
-                <h3>Address</h3>
-                <div class="address">
-                <table>
-                  <tr>
-                    <th>Gauteng Branch</th>
-                    <th>Gauteng Branch</th>
-                    <th>Free State Branch</th>
-                    <th>KwaZulu-Natal Branch</th>
-                  </tr>
-                  <tr>
-                    <td>133b Springs Road</td>
-                    <td>3 Masilela street</td>
-                    <td>40 Ernest street</td>
-                    <td>13 Braemar Ave</td>
-                  </tr>
-                  <tr>
-                    <td>Vulcania</td>
-                    <td>Kwa-Thema</td>
-                    <td>Riebeeckstad SP</td>
-                    <td>La Lucia</td>
-                  </tr>
-                  <tr>
-                    <td>Brakpan</td>
-                    <td>1575</td>
-                    <td>Riebeeckstad</td>
-                    <td>Umhlanga</td>
-                  </tr>
-                  <tr>
-                    <td>1549</td>
-                    <td></td>
-                    <td>Free state, 4959</td>
-                    <td>KwaZulu-Natal, 4051</td>
-                  </tr>
-                </table>
-              </div><br>
-                <div class="contact-text">
-                  <p>
-                    TEL:(011) 743 3001 or (011) 736 3582<br />
-                    ALT NO: 0834162645<br />
-                    FAX: 086 733 0583
-                    <br />info@ikasisolutions.co.za
-                  </p>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+                            <ul class="nav navbar-nav navbar-right main-nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="Blog.html">News</a></li>
+                                <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown"
+                                        class="dropdown-toggle">Vendors
+                                        <span><i class="fa fa-angle-down"></i></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="m-menu-content">
+                                                <ul class="col-sm-3">
+                                                    <li class="dropdown-header">Communication</li>
+                                                    <li><a href="Upgrades.html">Dell technologies</a></li>
+                                                    <li><a href="Upgrades.html">Hewlett Packard Enterprise</a></li>
+                                                    <li><a href="Upgrades.html">Solar winds</a></li>
+                                                    <li><a href="Upgrades.html">NetSheild</a></li>
+                                                    <li><a href="Upgrades.html">Huawei</a></li>
+                                                </ul>
+                                                <ul class="col-sm-3">
+                                                    <li class="dropdown-header">Cloud</li>
+                                                    <li><a href="Upgrades.html">SYNAQ</a></li>
+                                                    <li><a href="Upgrades.html">Adobe</a></li>
+                                                    <li><a href="Upgrades.html">Microsoft Office 365</a></li>
+                                                    <li><a href="Upgrades.html">Huawei</a></li>
+                                                </ul>
+                                                <ul class="col-sm-3">
+                                                    <li class="dropdown-header">Security</li>
+                                                    <li><a href="./Products/Kaspersky.html">Kaspersky</a></li>
+                                                    <li><a href="./Products/Sophos.html">Sophos</a></li>
+                                                    <li><a href="Upgrades.html">CheckPoint</a></li>
+                                                    <li><a href="Upgrades.html">VeeAm</a></li>
+                                                    <li><a href="Upgrades.html">Huawei</a></li>
+                                                </ul>
+                                                <ul class="col-sm-3">
+                                                    <li class="dropdown-header">Networking</li>
+                                                    <li><a href="./Products/Sophos.html">Sophos</a></li>
+                                                    <li><a href="Upgrades.html">Cisco</a></li>
+                                                    <li><a href="Upgrades.html">NetSheild</a></li>
+                                                    <li><a href="Upgrades.html">Solar winds</a></li>
+                                                    <li><a href="Upgrades.html">Huawei</a></li>
+                                                    <li><a href="Upgrades.html">Hewlett Packard Enterprise</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <!-- .navbar-collapse -->
+                    </div>
+                    <!-- .container -->
+                </nav>
+                <!-- .nav -->
+
+                <div id="Ikasi-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#Ikasi-carousel" data-slide-to="0" class="active"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img style="height: 830px ;width: 100%; filter: brightness(30%);" src="img/network.jpg" alt="Networking Banner"
+                                style="width: 100%;" class="Ikasi-network-banner">
+
+                            <div class="carousel-caption">
+                                <h1>Empowering your communication network with a safeguarded pathway to success<h1>
+
+                                        <p> Our secure communication solutions provide a reliable and protected platform
+                                            for seamless interaction, enabling efficient collaboration and driving
+                                            organizational success.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- #Ikasi-carousel-->
+
+                <section id="x-services ptb-100 gray-bg" class="container">
+
+                    <section style="padding: 40px;" class="main-wel-text">
+                        <div class="intro-text">
+                            <p >
+                                Welcome to Ikasi Solutions, your trusted Managed Service Provider dedicated to elevating
+                                your business through cutting-edge technology solutions. Discover our comprehensive
+                                suite of services and trusted partners, ensuring that your IT infrastructure is robust,
+                                secure, and optimized for performance. Whether you need round-the-clock network
+                                monitoring, advanced cybersecurity measures, or seamless cloud integration, our team of
+                                experienced professionals is here to support you every step of the way. At Ikasi
+                                Solutions, we prioritize your success by providing customized solutions tailored to meet
+                                your unique business needs, allowing you to focus on what matters most—growing your
+                                business.
+                            </p>
+                            <p >
+                                Discover the peace of mind that comes with partnering with Ikasi Solutions. Our
+                                proactive approach to IT management not only minimizes downtime but also enhances
+                                productivity and efficiency across your organization. We understand the challenges
+                                businesses face in today’s rapidly evolving technological landscape, which is why we
+                                stay ahead of the curve with the latest innovations and best practices. Trust us to be
+                                your reliable IT partner, delivering exceptional service and support that empowers your
+                                business to thrive in the digital age. Experience the Ikasi difference and let us
+                                transform your IT challenges into opportunities for growth and success.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="section-title">
+                        <div class="container text-center">
+                            <h2>What We Offer</h2>
+                            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
+                        </div>
+                    </section>
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="thumbnail clearfix">
+                                    <a href="services.html"><img class="img-responsive" src="img/communication logo.jpg"
+                                            alt="Image"></a>
+
+                                    <div class="caption">
+                                        <h3><a href="#">Communication</a></h3>
+
+                                        <p>Enhance your reach with our Communication Solutions, where we bridge gaps and
+                                            build connections. Our communication solutions are tailored to ensure that
+                                            your message is clear.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="thumbnail clearfix">
+                                    <a href="#"><img class="img-responsive" src="img/cloud logo.jpg" alt="Image"
+                                            height="5%"></a>
+
+                                    <div class="caption">
+                                        <h3><a href="#">Cloud</a></h3>
+
+                                        <p>Elevate your business to new heights with our Cloud Solutions. We specialize
+                                            in cloud computing services that are designed to streamline your operations,
+                                            empower your organization with flexibility, efficiency...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="thumbnail clearfix">
+                                    <a href="#"><img class="img-responsive" src="img/security-logo.jpg" alt="Image"></a>
+
+                                    <div class="caption">
+                                        <h3><a href="#">Security</a></h3>
+
+                                        <p>Secure your digital landscape with our Security Solutions. We provide
+                                            comprehensive security services that protect your critical assets from the
+                                            ever-growing threats of the cyber world.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="thumbnail clearfix">
+                                    <a href="#"><img class="img-responsive" src="img/Networking logo.jpg"
+                                            alt="Image"></a>
+
+                                    <div class="caption">
+                                        <h3><a href="#">Networking</a></h3>
+
+                                        <p>Connect with confidence with our Networking Solutions, where we offer
+                                            cutting-edge solutions to keep your business ahead of the curve. Our team of
+                                            experts designs and implements robust networks ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .row -->
+                    </div>
+                    <!-- .container -->
+                </section>
+                <!-- .x-services -->
+
+              
+                <div style="margin: 50px;" class="white-space">
+                    <h1><br></h1>
+                    <hr>
                 </div>
 
-                <ul class="location_icon">
-                  <li>
-                    <a
-                      href="https://www.bing.com/ck/a?!&&p=a7af8c644b8e79c6JmltdHM9MTcxNDg2NzIwMCZpZ3VpZD0yODE1YTFiNy0zOTE5LTZlNDAtMzY2My1iNTg2Mzg4NTZmNGMmaW5zaWQ9NTIzMw&ptn=3&ver=2&hsh=3&fclid=2815a1b7-3919-6e40-3663-b58638856f4c&psq=facebook+ikasi+sutions&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2lrYXNpc29sdXRpb25zLw&ntb=1"
-                      ><img
-                        src="./Images/facebook.png"
-                        height="100%"
-                        width="100%" /><i class="fa fa-facebook-f"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/ikasi-solutions-347014190?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                      ><img
-                        src="./Images/linkedin.png"
-                        height="100%"
-                        width="100%" /><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/ikasi_solutions?t=CtrGg4OJDeAO5s87GYyMbA&s=09"
-                      ><img
-                        src="./Images/twitter.png"
-                        height="100%"
-                        width="100%" /><i class="fa fa-instagram"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
+                <section class="testimonial">
+
+                    <div class="container">
+                        <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <blockquote>
+                                        <ul>
+                                            <li><img src="./img/1.png" class="img-responsive" alt="" /></li>
+                                        </ul>
+
+                                    </blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote>
+                                        <ul>
+                                            <li><img src="./img/2.png" class=" img-responsive" alt="" /></li>
+
+                                        </ul>
+                                    </blockquote>
+                                </div>                               
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#testimonialSlider" role="button" data-slide="prev">
+                                <span><i class="fa fa-angle-left"></i></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#testimonialSlider" role="button" data-slide="next">
+                                <span><i class="fa fa-angle-right"></i></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!-- #testimonialSlider -->
+                    </div>
+                </section>
+                <!-- .testimonial -->
+
+                <footer class="footer">
+
+                    <!-- Footer Widget Section -->
+                    <div class="footer-widget-section">
+                        <div class="container text-center">
+                            <div class="row">
+
+                                <h3 style="padding: 20px; color: lightgray;">Branches</h3>
+
+                                <div class="address-row">
+
+                                    <div class="address-column">
+                                        <h2 style="color: lightgray; font-size: 5pxks;">Brakpan Office</h2>
+                                        <p>133b Springs Road</p>
+                                        <p>Vulcania</p>
+                                        <p>Brakpan</p>
+                                        <p>1549</p>
+                                    </div>
+                                    <div class="address-column">
+                                        <h2 style="color: lightgray; font-size: 5pxks;">Kwa-Thema Office</h2>
+                                        <p>3 MASEKELA STREET</p>
+                                        <p>Kwa-Thema</p>
+                                        <p>1575</p>
+                                        <p></p>
+                                    </div>
+                                    <div class="address-column">
+                                        <h2 style="color: lightgray; font-size: 5pxks;">Free State Branch</h2>
+                                        <p>40 Ernest street</p>
+                                        <p>Riebeeckstad SP</p>
+                                        <p>Riebeeckstad</p>
+                                        <p>Free state, 4959</p>
+                                    </div>
+                                    <div class="address-column">
+                                        <h2 style="color: lightgray; font-size: 5pxks;">KwaZulu-Natal Branch</h2>
+                                        <p>13 Braemar Ave</p>
+                                        <p>La Lucia</p>
+                                        <p>Umhlanga</p>
+                                        <p>KwaZulu-Natal, 4051</p>
+                                    </div>
+                                    <div class="address-column">
+                                        <h2 style="color: lightgray; font-size: 5pxks">
+                                          Limpopo Branch
+                                        </h2>
+                                        <p>981 Hlaleka Sreet Lulekani</p>
+                                        <p>Phalaborwa</p>
+                                        <p>Limpopo</p>
+                                        <p>1392</p>
+                                    </div>
+                                </div>
+
+                                <div  class="col-sm-4 footer-block last">
+                                    <div class="footer-widget widget_text">
+                                        <address>
+                                            Contact US <br>
+                                            TEL: (011) 743 3001 or (011) 736-3111 <br>
+                                            ALT NO: 083 416 2645 <br>
+                                            Send an Email on <a href="mailto:Info@ikasisolutions.co.za">Info@ikasisolutions.co.za</a><br>
+                                        </address>
+                
+                                        <ul class="list-inline social-links">
+                                            <li><a rel="noopener" target="_blank" href="https://www.facebook.com/ikasisolutions/"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a rel="noopener" target="_blank" href="https://x.com/ikasi_solutions"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a rel="noopener" target="_blank" href="https://www.instagram.com/ikasisolutions"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a rel="noopener" target="_blank" href="https://www.linkedin.com/in/ikasi-solutions-347014190/"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /.col-sm-4 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Footer Widget Section -->
+
+                    <div class="copyright-section">
+                        <div class="container clearfix">
+                            <span class="copytext">&copy; Ikasi Solutions. All rights reserved. | Created & Modified By: <a
+                                    href="#">Crypto and Zukamime</a></span>
+
+                            <ul class="list-inline pull-right">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="Blog.html">News</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- .container -->
+                    </div>
+                    <!-- .copyright-section -->
+                </footer>
+                <!-- .footer -->
+
             </div>
-          </div>
+            <!-- .content-wrapper -->
         </div>
-        <div class="copyright">
-          <div class="design-container">
-            <p>© Design By Ikasi solutions</p>
-          </div>
+        <!-- .offcanvas-pusher -->
+
+        <div class="uc-mobile-menu uc-mobile-menu-effect">
+            <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas"
+                id="uc-mobile-menu-close-btn">&times;</button>
+            <div>
+                <div>
+                    <ul id="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="Blog.html">News</a></li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+        <!-- .uc-mobile-menu -->
+
     </div>
-  </footer>
+    <!-- #main-wrapper -->
+
+
+    <section>
+        <div class="back-marquee" id="logo-marquee">
+            <div class="marquee-content">
+                <img src="./img/karspersky product Icons/Asset_1.png" alt="">
+                <img src="./img/logo-client-2.png" alt="">
+                <img src="./img/logo-client-6.png" alt="">
+                <img src="./img/logo-client-4.png" alt="">
+                <img src="./img/logo-client-5.png" alt="">
+                <img src="./img/logo-client-3.png" alt="">
+                <img src="./img/dell-tech-Logo.png" alt="">
+                <img src="./img/veeam-logo.png" alt="">
+                <img src="./img/hpe1-wite.png" alt="">
+                <img src="./img/Huawei-Logo1-white.png" alt="">
+                <!-- Add more logos as needed -->
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Script -->
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/flexSlider/jquery.flexslider-min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
 </html>
