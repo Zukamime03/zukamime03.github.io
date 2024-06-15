@@ -129,7 +129,7 @@ window.addEventListener('scroll', function() {
     // Calculate the color based on scroll position
     var color;
 
-    if (scrollPosition < 200) { // Change color until a certain scroll position (adjust as needed)
+    if (scrollPosition < 180) { // Change color until a certain scroll position (adjust as needed)
         color = 'rgba(0, 0, 0, 0)'; // Transparent color
         piclogo.size
     } else {
@@ -139,6 +139,28 @@ window.addEventListener('scroll', function() {
     // Update background color
     marquee.style.backgroundColor = color;
 
-
 });
+
+window.onscroll = function () { 
+    scrollFunction(); 
+}; 
+
+function scrollFunction() { 
+    var image = document.getElementById("pic-logo"); 
+    let screenWidth = window.screen.width;
+let screenHeight = window.screen.height;
+
+    if (document.documentElement.scrollTop < 180) {
+        image.style.width = "250px";
+        image.style.height = "200px";
+     } else {
+        image.style.width = "80px";
+        image.style.height = "50px" 
+     }
+
+     if (screenWidth < "500px"){
+        image.style.width = "80px";
+        image.style.width = "50px";
+     }
+} 
 
