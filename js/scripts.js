@@ -151,8 +151,7 @@ function scrollFunction() {
 let screenHeight = window.screen.height;
 
     if (document.documentElement.scrollTop < 180) {
-        image.style.width = "250px";
-        image.style.height = "200px";
+       
      } else {
         image.style.width = "80px";
         image.style.height = "50px" 
