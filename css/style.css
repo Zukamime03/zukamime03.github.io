@@ -1102,7 +1102,26 @@ Team
     position: relative;
     z-index: 1;
     }
+    @media (max-width : 540px) {
+        .single-page-title h2 {
+            font-size: 50px;
+            font-weight : 600;
+            }
+        }
 
+    @media (max-width : 400px) {
+        .single-page-title h2 {
+            font-size: 40px;
+            font-weight : 500;
+            }
+        }
+
+        @media (max-width : 250px) {
+            .single-page-title h2 {
+                font-size: 20px;
+                font-weight : 300;
+                }
+            }
 
 /*-------------------------
     Progress Bar
