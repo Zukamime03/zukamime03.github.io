@@ -147,20 +147,20 @@ window.onscroll = function () {
 
 function scrollFunction() { 
     var image = document.getElementById("pic-logo"); 
-    let screenWidth = window.screen.width;
-let screenHeight = window.screen.height;
+    let screenWidth = window.innerWidth;
+let screenHeight = window.innerWidth;
 
     if (document.documentElement.scrollTop < 180) {
-        image.style.width = "250px";
+        image.style.width = "270px";
         image.style.height = "200px";
      } else {
         image.style.width = "80px";
         image.style.height = "50px" 
      }
 
-     if (screenWidth < "500px"){
+     if (screenWidth < 500){
         image.style.width = "80px";
-        image.style.width = "50px";
+        image.style.height = "50px";
      }
 } 
 
