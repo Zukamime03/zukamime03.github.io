@@ -1,3 +1,5 @@
+
+
 jQuery(function ($) {
 
     'use strict';
@@ -151,7 +153,7 @@ function scrollFunction() {
 let screenHeight = window.innerWidth;
 
     if (document.documentElement.scrollTop < 180) {
-        image.style.width = "270px";
+        image.style.width = "305px";
         image.style.height = "200px";
      } else {
         image.style.width = "80px";
@@ -164,3 +166,60 @@ let screenHeight = window.innerWidth;
      }
 } 
 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.gallery img');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    if (index >= totalSlides) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide = index;
+    }
+    const offset = -currentSlide * 100;
+    document.querySelector('.gallery').style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+let slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+document.querySelector('.gallery-container').addEventListener('mouseover', () => {
+    clearInterval(slideInterval);
+});
+
+document.querySelector('.gallery-container').addEventListener('mouseout', () => {
+    slideInterval = setInterval(nextSlide, 3000);
+});
+
+ // JavaScript to handle popup functionality
+ document.addEventListener('DOMContentLoaded', function () {
+    var popupLinks = document.getElementsByClassName('popup-link');
+    var popupOverlay = document.getElementById('popup-overlay');
+    var closeBtn = document.getElementById('close-btn');
+    var iframe = document.querySelector('.popup-content iframe');
+
+    Array.from(popupLinks).forEach(function(link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var videoId = this.getAttribute('data-video-id');
+        var videoSrc = 'https://www.youtube.com/embed/' + videoId;
+        iframe.src = videoSrc;
+        popupOverlay.style.display = 'flex';
+      });
+    });
+
+    // Close the popup
+    closeBtn.addEventListener('click', function () {
+      popupOverlay.style.display = 'none';
+      iframe.src = ''; // Clear the iframe src to stop video playback
+    });
+  });
