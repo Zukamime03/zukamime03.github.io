@@ -152,13 +152,13 @@ function scrollFunction() {
     let screenWidth = window.innerWidth;
     let screenHeight = window.innerWidth;
 
-    if (screenWidth < 600 && document.documentElement.scrollTop < 180 ) {
+    if (screenWidth < 500 && document.documentElement.scrollTop < 180 ) {
         image.style.width = "80px";
         image.style.height = "50px";
-    } else if (screenWidth >= 768 && screenWidth < 991 && document.documentElement.scrollTop < 180) {
+    } else if (screenWidth >= 668 && screenWidth < 891 && document.documentElement.scrollTop < 180) {
         image.style.width = "110px";
         image.style.height = "80px";
-    } else if (screenWidth >= 992 && screenWidth < 1199 && document.documentElement.scrollTop < 180) {
+    } else if (screenWidth >= 892 && screenWidth < 1199 && document.documentElement.scrollTop < 180) {
         image.style.width = "200px";
         image.style.height = "140px";
     } else if (screenWidth > 1200 && document.documentElement.scrollTop < 180 ) {

@@ -1747,12 +1747,26 @@ Begining of Vendor Style
         width: 70%;
         height: 60%;
     }
+    .img-container{
+        width: 180px;
+        height: 140px ;
+    }
+    .img-container .overlay ul {
+        font-size: 10px;
+    }
     }
 
 @media (min-width : 768px) and (max-width : 991px) {
     .img-container img {
         width: 60%;
         height: 50%;
+    }
+    .img-container{
+        width: 160px;
+        height: 130px ;
+    }
+    .img-container .overlay ul {
+        font-size: 8px;
     }
     }
 
@@ -1761,12 +1775,26 @@ Begining of Vendor Style
         width: 50%;
         height: 40%;
     }
+    .img-container{
+        width: 140px;
+        height: 110px ;
+    }
+    .img-container .overlay ul {
+        font-size: 6px;
+    }
     }
     
 @media (max-width : 600px) {
     .img-container img {
         width: 40%;
         height: 30%;
+    }
+    .img-container{
+        width: 120px;
+        height: 90px ;
+    }
+    .img-container .overlay ul {
+        font-size: 5px;
     }
     } 
 
