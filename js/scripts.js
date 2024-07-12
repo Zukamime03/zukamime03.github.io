@@ -112,6 +112,9 @@ $(document).on('click', '.m-menu .dropdown-menu', function(e) {
   e.stopPropagation()
 })
 
+let screenWidth = window.innerWidth; // to get the width of the browser
+let screenHeight = window.innerWidth; // to get height of browser
+
 document.addEventListener('DOMContentLoaded', () => {
     const marqueeContent = document.querySelector('.marquee-content');
     const logos = marqueeContent.querySelectorAll('img');
@@ -138,6 +141,8 @@ window.addEventListener('scroll', function() {
         color = 'rgba(45, 45, 45, 1)';
     }
 
+    if (screenHeight < '')
+
     // Update background color
     marquee.style.backgroundColor = color;
 
@@ -149,10 +154,8 @@ window.onscroll = function () {
 
 function scrollFunction() { 
     var image = document.getElementById("pic-logo"); 
-    let screenWidth = window.innerWidth;
-    let screenHeight = window.innerWidth;
 
-    if (screenWidth < 500 && document.documentElement.scrollTop < 180 ) {
+    if (screenWidth < 500 && screenWidth < 667 && document.documentElement.scrollTop < 180 ) {
         image.style.width = "80px";
         image.style.height = "50px";
     } else if (screenWidth >= 668 && screenWidth < 891 && document.documentElement.scrollTop < 180) {

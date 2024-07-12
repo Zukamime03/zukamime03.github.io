@@ -250,8 +250,4 @@ jQuery(function ($) {
 
     }());
 
-
-
-
-
 }); // JQuery end

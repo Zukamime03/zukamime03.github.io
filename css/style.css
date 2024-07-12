@@ -1124,24 +1124,15 @@ service-icon-style
     }
 
 .service-icon-style .promo-icon {
-    width: 75px;
-    height: 80px;
     color: #dadada;
-    background-color: #31aae2;
     font-size: 24px;
     line-height: 76px;
     text-align: center;
-    border: 2px solid #dadada;
     margin: 0 auto 36px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    }
-.service-icon-style .promo-block-wrapper:hover .promo-icon {
-    background-color: #31aae2;
-    color: #fff;
-    border: 2px solid transparent;
     }
 
 .service-icon-style .promo-content {
@@ -1272,6 +1263,7 @@ service-icon-style
 .tabOne .tab-pane img.pull-right {
     margin-left: 20px;
     }
+
 /*collapse in small devices*/
 .tabOne .panel-body img{
     margin-top: 8px;
@@ -1289,83 +1281,6 @@ service-icon-style
 .tabOne .tab-pane p:last-of-type {
     margin-bottom: 0;
     }
-
-/*------------------
-  FORM STYLE
-  -------------------- */
-.form-group {
-    margin-bottom: 20px;
-    }
-.form-control {
-    height: 53px;
-    padding: 6px 20px 6px 30px;
-    font-size: 13px;
-    line-height: 24px;
-    color: #969595;
-    border: 2px solid #F1F1F1;
-    border-radius: 0;
-    box-shadow: none;
-    }
-.form-control:focus {
-    border: 2px solid #31aae2 !important;
-    box-shadow: none;
-    }
-
-
-/*---------------
- Contact Form
- -----------------*/
-
-/*.contact-form  {}*/
-.contact-form  h2{
-    line-height: 36px;
-    margin-bottom: 45px;
-    }
-
-.user-message textarea {
-    min-height: 195px;
-    padding-top: 12px;
-    }
-.contact-form form button {
-    margin-top: 10px;
-    }
-
-
-.user-name,
-.user-email,
-.user-phone,
-.user-url,
-.user-message{
-    position: relative;
-    }
-.user-name::after,
-.user-email::after,
-.user-phone::after,
-.user-url::after,
-.user-message::after {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    font-family: "FontAwesome";
-    color: #dadada;
-    }
-
-.user-name::after {
-    content: "\f007";
-    }
-.user-email::after {
-    content: "\f003";
-    }
-.user-phone::after {
-    content: "\f095";
-    }
-.user-url::after {
-    content: "\f0ac";
-    }
-.user-message::after {
-    content: "\f086";
-    }
-
 
 /* --------------------------------------------
     Footer
@@ -1637,9 +1552,9 @@ service-icon-style
     font-size: 15px;
 }
 
-/*--------------
+/*----------------------------
 Logo styles and media queries
--------------*/
+-----------------------------*/
 
 #pic-logo {
     height: 200px; 
@@ -1664,9 +1579,9 @@ Logo styles and media queries
     padding-left: 30px;
 }
 
-/* ---------------
+/* ----------------------
 Begining of Vendor Style 
----------------------*/
+------------------------*/
 
 .vendors{
     padding-top: 30px;
@@ -1719,8 +1634,8 @@ Begining of Vendor Style
     display: block;
     width: 80%;
     height: 70%;
-    border-radius: 10px;
     transition: transform 0.3s ease;
+    align-items: center;
 }
 
 .overlay {
@@ -1730,7 +1645,6 @@ Begining of Vendor Style
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px;
     box-sizing: border-box; 
     transform: translateY(100%); /* Initially hidden below the container */
     transition: transform 0.3s ease;
@@ -1786,24 +1700,22 @@ Begining of Vendor Style
     
 @media (max-width : 600px) {
     .img-container img {
-        width: 40%;
-        height: 30%;
+        width: 30%;
+        height: 20%;
     }
     .img-container{
-        width: 120px;
-        height: 90px ;
+        width: 100px;
+        height: 70px ;
     }
     .img-container .overlay ul {
         font-size: 5px;
     }
     } 
-
-
 /*----------end of Vendor style-------------*/
 
 .mini-icon{
-    height: 80px;
-    width: 75px;
+    height: 85px;
+    width: 80px;
 }
 
 /*---------------------------
@@ -1830,7 +1742,7 @@ Popup Content
     border-radius: 8px;
     position: relative;
     height: 650px;
-    width: 650px;
+    width: 850px;
   }
 
   .close-btn {
@@ -1842,7 +1754,7 @@ Popup Content
 
   #w-video{
     height: 600px;
-    width: 600px;
+    width: 800px;
   }
 
   /*end of popup content*/
