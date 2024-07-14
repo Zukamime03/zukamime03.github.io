@@ -231,3 +231,27 @@ document.querySelector('.gallery-container').addEventListener('mouseout', () => 
       iframe.src = ''; // Clear the iframe src to stop video playback
     });
   });
+
+  // JavaScript to handle popup functionality about test
+ document.addEventListener('DOMContentLoaded', function () {
+    var popupLinks = document.getElementsByClassName('popup-link1');
+    var popupOverlay = document.getElementById('popup-overlay1');
+    var closeBtn = document.getElementById('close-btn1');
+    var iframe = document.querySelector('.popup-content1 iframe');
+
+    Array.from(popupLinks).forEach(function(link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var videoId = this.getAttribute('data-video-id');
+        var videoSrc = 'https://www.youtube.com/embed/' + videoId;
+        iframe.src = videoSrc;
+        popupOverlay.style.display = 'flex';
+      });
+    });
+
+    // Close the popup
+    closeBtn.addEventListener('click', function () {
+      popupOverlay.style.display = 'none';
+      iframe.src = ''; // Clear the iframe src to stop video playback
+    });
+  });
