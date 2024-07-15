@@ -1576,17 +1576,17 @@ Logo styles and media queries
 /*------------------------
 Banner style
 -----------------------*/
-.item img{
+.banner img{
     height: 720px ;
     width: 100%;
     filter: brightness(30%);
 } 
  
 @media (max-width : 550px){
-    .item img{
-        height: 550px;
-        width: 100%;
-        filter: brightness(30%);
+    .banner img{
+    height: 550px;
+    width: 100%;
+    filter: brightness(30%);
 } 
 }
   
