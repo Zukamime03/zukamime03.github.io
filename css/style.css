@@ -680,19 +680,6 @@ Shortcode Content
     font-weight : normal;
     }
 
-.hero-slide .carousel-control.left,
-.hero-slide .carousel-control.right {
-    width       : 50px;
-    height      : 50px;
-    line-height : 46px;
-    top         : 50%;
-    margin-top  : -25px;
-    background  : transparent;
-    cursor      : pointer;
-    border      : 2px solid #ffffff;
-    text-shadow : none;
-    }
-
 /*Media Query*/
 
 @media (min-width : 992px) and (max-width : 1199px) {
@@ -1585,7 +1572,30 @@ Logo styles and media queries
 }
 
 /*-----end of logo style----*/
+
+/*------------------------
+Banner style
+-----------------------*/
+.item img{
+    height: 720px ;
+    width: 100%;
+    filter: brightness(30%);
+} 
+ 
+@media (max-width : 550px){
+    .item img{
+    height: 400px;
+} 
+}
   
+/*--------End of banner syle-------*/
+
+/*Media queries used to cahnge line size for smaller screens*/
+@media (max-width : 550px){
+    .service-line{
+        font-size: 15px;
+    }
+}
 .main-wel-text{
     padding-top: 20px;
     padding-bottom: 20px;
