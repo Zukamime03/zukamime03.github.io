@@ -41,156 +41,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
-      body,
-      h1,
-      p,
-      ul,
-      li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-family: Arial, sans-serif;
-      }
-
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 1px;
-      }
-
-      .prod-intro {
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-      }
-
-      .prod-intro h1 {
-        padding: 1%;
-      }
-
-      .prod-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        height: 35%;
-        padding-left: 10px;
-      }
-
-      .prod-card {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        width: calc(30% - 20px);
-        text-align: center;
-        transition: all 0.3s ease;
-        box-sizing: border-box;
-        height: 400px;
-      }
-
-      .prod-card img {
-        border-radius: 10px 10px 0 0;
-        max-width: 100%;
-        height: auto;
-      }
-
-      .prod-card h2 {
-        color: #3cba54;
-        font-size: 1.5em;
-        margin: 15px 0 10px;
-      }
-
-      .prod-card p {
-        color: #555;
-        font-size: 1em;
-      }
-
-      .prod-card:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        transform: translateY(-5px);
-      }
-      .navbar-default .navbar-nav > .active > a,
-      .navbar-default .navbar-nav > .active > a:focus,
-      .navbar-default .navbar-nav > .active > a:hover {
-        color: #ffffff;
-        background-color: transparent;
-        border: 2px solid #ffffff;
-      }
-
-      .prod-card .prod-popup-text {
-        visibility: hidden;
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 0.9em;
-        width: 200px;
-        text-align: center;
-        transition: visibility 0.3s ease;
-      }
-
-      .prod-card:hover .prod-popup-text {
-        visibility: visible;
-      }
-
-      .prod-quick-links {
-        width: 20%;
-        background-color: #ffffff;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      aside.prod-quick-links h2 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        color: #3cba54;
-      }
-
-      aside.prod-quick-links ul {
-        list-style: none;
-      }
-
-      aside.prod-quick-links ul li {
-        margin-bottom: 10px;
-      }
-
-      aside.prod-quick-links ul li a {
-        color: #3cba54;
-        text-decoration: none;
-        font-size: 1.1em;
-      }
-
-      aside.prod-quick-links ul li a:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-        .prod-container {
-          width: 100%;
-        }
-        .prod-card {
-          width: calc(100% - 20px);
-        }
-        .prod-quick-links {
-          width: 100%;
-        }
-      }
-
-      #prod-Illustration {
-        height: 150px;
-        width: 400px;
-        padding: 2%;
-      }
-    </style>
+    
   </head>
   <body>
     <div id="main-wrapper">
@@ -311,7 +162,7 @@
                         <img
                           height="100px"
                           width="100px"
-                          src="../Img/karspersky_Product_Icons/k_EDR_Expert_black_icon.png"
+                          src="../img/karspersky_Product_Icons/k_EDR_Expert_black_icon.png"
                           alt="Kaspersky EDR Expert"
                         />
                         <h2>Kaspersky EDR Expert</h2>
@@ -330,11 +181,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href="https://youtu.be/c3vjJ969uo0?si=szMIdRH9DUmuP8A0"
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="c3vjJ969uo0" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -342,7 +190,7 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/Kaspersky_Next_.svg"
+                          src="../img/karspersky_Product_Icons/Kaspersky_Next_.svg"
                           alt="Kaspersky Next"
                         />
                         <h2>Kaspersky NEXT</h2>
@@ -374,7 +222,7 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/EDR_Optimum_black.svg"
+                          src="../img/karspersky_Product_Icons/EDR_Optimum_black.svg"
                           alt="Kaspersky Next EDR Optimum"
                         />
                         <h2>Kaspersky Next EDR Optimum</h2>
@@ -392,12 +240,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href="https://www.kaspersky.co.za/next-edr-optimum"
-                              class="open-video"
-                              >Here</a
-                            >
+                            class="popup-link" data-video-id="rMYLMPFKYz8" href="#">
+                            Here</a>
                             to learn more
                           </p>
                         </div>
@@ -406,7 +250,7 @@
                         <img
                           height="100px"
                           width="100px"
-                          src="../Img/karspersky_Product_Icons/k_Extended_Detection_and_Response_black_icon.svg"
+                          src="../img/karspersky_Product_Icons/k_Extended_Detection_and_Response_black_icon.svg"
                           alt="XDR"
                         />
                         <h2>Kaspersky XDR</h2>
@@ -424,11 +268,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href="https://www.kaspersky.co.za/enterprise-security/xdr"
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="hIB42DeXilQ" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -437,7 +278,7 @@
 
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/Kaspersky_Security for_Microsoft_Office_365.png"
+                          src="../img/karspersky_Product_Icons/Kaspersky_Security for_Microsoft_Office_365.png"
                           alt="Kaspersky Security for Microsoft Office 365"
                         />
                         <h2>Kaspersky Security for Microsoft Office 365</h2>
@@ -452,11 +293,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href="https://youtu.be/nbJug3XiZGk"
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="nbJug3XiZGk" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -464,7 +302,7 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/Endpoint_Security_for_Business.png"
+                          src="../img/karspersky_Product_Icons/Endpoint_Security_for_Business.png"
                           alt="KES for Business"
                         />
                         <h2>Kaspersky Endpoint Security For Business</h2>
@@ -479,12 +317,9 @@
                         <div class="prod-popup-text">
                           <p style="color: white">
                             Click
-                            <a
-                              rel="noopener"
-                              target="_blank"
-                              href="https://www.kaspersky.co.za/small-to-medium-business-security/total"
-                              class="open-video"
-                              >Here</a
+                           <a
+                            class="popup-link" data-video-id="qsI3jeODQi0" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -492,7 +327,7 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/Kaspersky_Endpoint_Security_Cloud.png"
+                          src="../img/karspersky_Product_Icons/Kaspersky_Endpoint_Security_Cloud.png"
                           alt="KES Cloud"
                         />
                         <h2>Kaspersky Endpoint Security cloud</h2>
@@ -506,11 +341,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href="https://youtu.be/-EJomdreqlk"
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="-EJomdreqlk" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -518,7 +350,7 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/Kaspersky_Embedded_Systems_Security.png"
+                          src="../img/karspersky_Product_Icons/Kaspersky_Embedded_Systems_Security.png"
                           alt="Embedded systems Security"
                         />
                         <h2>Kaspersky Embedded Systems Security</h2>
@@ -530,11 +362,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href=""
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="KB0vqsLZ6_s" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -557,11 +386,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href=""
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="hGqUzrcbvKc" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -569,9 +395,8 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          height="35%"
-                          width="35%"
-                          src="../Img/karspersky_Product_Icons/k_Container_Security_black_icon.svg"
+                          style = "height: 35%; width: 35%;"
+                          src="../img/karspersky_Product_Icons/k_Container_Security_black_icon.svg"
                           alt="Container Security"
                         />
                         <h2>Kaspersky Container Security</h2>
@@ -582,11 +407,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href=""
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="O0U_OSI_B7U" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -594,7 +416,7 @@
                       </div>
                       <div class="prod-card">
                         <img
-                          src="../Img/karspersky_Product_Icons/Kaspersky_Hybrid_Cloud_Security.png"
+                          src="../img/karspersky_Product_Icons/Kaspersky_Hybrid_Cloud_Security.png"
                           alt="hybrid cloud security"
                         />
                         <h2>Kaspersky Hybrid cloud Security</h2>
@@ -606,11 +428,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href=""
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="dy-6SWZUG2o" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -630,11 +449,8 @@
                           <p style="color: white">
                             Click
                             <a
-                              rel="noopener"
-                              target="_blank"
-                              href=""
-                              class="open-video"
-                              >Here</a
+                            class="popup-link" data-video-id="FTL9b_VlNEU" href="#">
+                            Here</a
                             >
                             to learn more
                           </p>
@@ -656,7 +472,7 @@
         </div>
 
           <a href="../contact.html" class="contact-us-icon">
-            <i class='fa fa-paper-plane'></i>
+            <i class='fa fa-comments'></i>
           </a>
           
           <footer class="footer">
