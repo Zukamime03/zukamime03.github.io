@@ -1571,8 +1571,9 @@ Logo styles and media queries
 Banner style
 -----------------------*/
 .banner img{
-    height: 720px ;
+    height: 100vh;
     width: 100%;
+    object-fit: cover;
     filter: brightness(30%);
 } 
  
