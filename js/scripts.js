@@ -204,3 +204,7 @@ document.querySelector('.gallery-container').addEventListener('mouseover', () =>
 document.querySelector('.gallery-container').addEventListener('mouseout', () => {
     slideInterval = setInterval(nextSlide, 3000);
 });
+
+function clearForm() {
+    document.getElementById('contactForm').reset();
+}

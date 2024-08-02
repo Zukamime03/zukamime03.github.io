@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Ikasi Solutions | Contact</title>
+    <title>Ikasi Solutions | Contact Us</title>
     <!-- web-fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -67,7 +67,7 @@
                                     <li class="dropdown-header">Communication</li>
                                     <li><a class="popup-link" data-video-id="idHPbgMpdKo" href="#">Dell technologies</a></li>
                                     <li><a class="popup-link" data-video-id="Wporyr3hr68" href="#">Hewlett Packard Enterprise</a></li>
-                                    <li><a class="popup-link" data-video-id="" href="#">Solar winds</a></li>
+                                    <li><a class="popup-link" data-video-id="vXj4ufVF42M" href="#">Solar winds</a></li>
                                     <li><a class="popup-link" data-video-id="A1qKp5bsGmo" href="#">NetSheild</a></li>
                                     <li><a class="popup-link" data-video-id="iV0CwoCJBno" href="#">Huawei</a></li>
                                 </ul>
@@ -91,7 +91,7 @@
                                     <li><a href="./Products/Sophos.html">Sophos</a></li>
                                     <li><a class="popup-link" data-video-id="bHOpHg4WwTMK" href="#">Cisco</a></li>
                                     <li><a class="popup-link" data-video-id="A1qKp5bsGmo" href="#">NetSheild</a></li>
-                                    <li><a class="popup-link" data-video-id="" href="#">Solar winds</a></li>
+                                    <li><a class="popup-link" data-video-id="uIKE6PCCeS8" href="#">Solar winds</a></li>
                                     <li><a class="popup-link" data-video-id="iV0CwoCJBno" href="#">Huawei</a></li>
                                     <li><a class="popup-link" data-video-id="MnAl5acI2Nk" href="#">Veeam</a></li>
                                     <li><a class="popup-link" data-video-id="hpHkLLmkD_o" href="#">Manage Engine</a></li>
@@ -118,43 +118,46 @@
 </section>
 <!-- .page-title -->
 
-<section class="contact-form ptb-100">
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group user-name">
-                                <label for="nameFive-first" class="sr-only">Name</label>
-                                <input type="text" class="form-control" required="" id="nameFive-first" placeholder="First Name">
-                            </div>
-
-                            <div class="form-group user-email">
-                                <label for="emailFive" class="sr-only">Email</label>
-                                <input type="email" class="form-control" required="" id="emailFive" placeholder="Email Address">
-                            </div>
-
-
-                            <div class="form-group user-phone">
-                                <label for="websiteOne" class="sr-only">Website</label>
-                                <input type="text" class="form-control" required="" id="websiteOne" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group user-message">
-                                <label for="messageOne" class="sr-only">Message</label>
-                                <textarea class="form-control" required="" id="messageOne" placeholder="Write Message"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div> /.col-md-8 
-       </div>
-
+<!--Contact form-->
+<div class="contact-form-container">
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xpwadypz" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (optional):</label>
+                <input type="tel" id="phone" name="phone">
+                <span class="optional">Please enter your phone number if you prefer to be contacted by phone.</span>
+            </div>
+            <div class="form-group">
+                <label>Type of Inquiry:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="inquiry" value="demo" required> Request a Demo</label>
+                    <label><input type="radio" name="inquiry" value="product" required> Product Inquiry</label>
+                    <label><input type="radio" name="inquiry" value="quote" required> Get a Quote</label>
+                    <label><input type="radio" name="inquiry" value="Support" required> Support</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write a message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="clearForm()" >Send</button>
+            </div>
+        </form>
     </div>
-</section>
+</div>
 <!-- .contact-form-->
 
 <div class="popup-overlay" id="popup-overlay">

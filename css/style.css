@@ -190,7 +190,7 @@ button:focus,
     }
 
 .ptb-100 {
-    padding-top    : 50px;
+    padding-top    : 2px;
     padding-bottom : 15px;
     }
 
@@ -1517,7 +1517,7 @@ service-icon-style
         }
     }
 
-    .ptb-100 {
+    .ptb-100{
         padding-top: 50px;
         padding-bottom: 15px;
     }
@@ -1676,9 +1676,9 @@ Popup Content
   }
   /*-------End---------*/
 
-  /*----------------------
+  /*---------------------------
   kaspersky Product page style
-  ----------------------*/
+  ----------------------------*/
         main {
         display: flex;
         flex-wrap: wrap;
@@ -1826,6 +1826,7 @@ ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
     background-color: #eee;
+    margin-bottom: 0px;
   }
   
   ul.breadcrumb li {
@@ -1848,3 +1849,74 @@ ul.breadcrumb {
     color: #01447e;
     text-decoration: underline;
   }
+
+/*---------------------------------
+Contact Form style
+---------------------------------*/
+.contact-form-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.contact-form h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #003b40;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #003b40;
+}
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group input[type="radio"] {
+    margin-right: 10px;
+}
+.form-group .radio-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group .radio-group label {
+    margin: 0;
+}
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+.form-group button {
+    background-color: #00a859;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-group button:hover {
+    background-color: #008c53;
+}
+.form-group .optional {
+    font-size: 0.9em;
+    color: #666;
+}
+/*-----End of form style-----*/
