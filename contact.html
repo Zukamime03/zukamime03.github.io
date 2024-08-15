@@ -120,8 +120,8 @@
 
 <!--Contact form-->
 <div class="contact-form-container">
-    <div class="contact-form">
-        <form action="https://formspree.io/f/xpwadypz" method="post">
+    <div class="contact-form" id="contact-form">
+        <form action="https://formspree.io/f/xqazlzwr" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -142,9 +142,27 @@
             <div class="form-group">
                 <label>Type of Inquiry:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="inquiry" value="demo" required> Request a Demo</label>
+                    <label><input type="radio" name="inquiry" value="demo" required onclick="toggleListbox(true)"> Request a Demo</label>
+                    <div id="listboxContainer">
+                        <label for="listbox">Choose a Product below:</label>
+                        <select id="listbox" name="product_Demo" class="searchable">
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="Sophos">Sophos</option>
+                            <option value="Kaspersky">Kaspersky</option>
+                            <option value="Cisco">Cisco</option>
+                            <option value="Veeam">Veeam</option>
+                            <option value="Solarwinds">Solarwinds</option>
+                            <option value="Microsoft 365">Microsoft 365</option>
+                            <option value="NetSheild">NetSheild</option>
+                            <option value="SYNAQ">SYNAQ</option>
+                            <option value="CheckPoint">CheckPoint</option>
+                            <option value="Manage Engine">Manage Engine</option>
+                            <option value="Huawei">Huawei</option>
+                            <option value="HPE">Hewlett Packard Enterprise</option>
+                            <option value="Dell technologies">Dell technologies</option>
+                        </select>
+                    </div>
                     <label><input type="radio" name="inquiry" value="product" required> Product Inquiry</label>
-                    <label><input type="radio" name="inquiry" value="quote" required> Get a Quote</label>
                     <label><input type="radio" name="inquiry" value="Support" required> Support</label>
                 </div>
             </div>
@@ -153,7 +171,7 @@
                 <textarea id="message" name="message" placeholder="Write a message" required></textarea>
             </div>
             <div class="form-group">
-                <button type="submit" onclick="clearForm()" >Send</button>
+                <button type="submit" onclick="clearForm()">Send</button>
             </div>
         </form>
     </div>
@@ -246,13 +264,14 @@
                 <span class="copytext">&copy; Ikasi Solutions. All rights reserved. | Created & Modified By: <a
                     rel="noopener" target="_blank" href="https://zukamime03.github.io">LAMPROS Developments</span>
 
-                <ul class="list-inline pull-right">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="Blog.html">News</a></li>
-                    <li class="active"><a href="contact.html">Contact</a></li>
-                </ul>
+                    <ul class="list-inline pull-right">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./Mobileproducts.html">Partners</a></li>
+                        <li><a href="./Blog.html">News</a></li>
+                        <li class="active"><a href="./contact.html">Contact</a></li>
+                    </ul>
             </div>
             <!-- .container -->
         </div>
@@ -274,6 +293,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="Mobileproducts.html">Products</a></li>
                 <li><a href="Blog.html">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -317,6 +337,8 @@
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/popup.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

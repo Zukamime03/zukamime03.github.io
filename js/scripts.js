@@ -206,5 +206,18 @@ document.querySelector('.gallery-container').addEventListener('mouseout', () => 
 });
 
 function clearForm() {
-    document.getElementById('contactForm').reset();
+    document.getElementById('contact-form"').reset();
+}
+
+$(document).ready(function() {
+    $('.searchable').select2();
+});
+
+function toggleListbox(show) {
+    const listboxContainer = document.getElementById('listboxContainer');
+    if (show) {
+        listboxContainer.style.display = 'block';
+    } else {
+        listboxContainer.style.display = 'none';
+    }
 }
