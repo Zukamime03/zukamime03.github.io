@@ -1946,17 +1946,17 @@ Contact Form style
 
 /*------Mobile Product style ------*/
 .logos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px;
-    justify-content: center;
-    margin-top: 100px;
-    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
 .logos img {
     max-width: 150px;
-    height: auto;
+    margin: 20px;
+    flex: 1 1 150px; 
 }
 
 /* Responsive Design */
