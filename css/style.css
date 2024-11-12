@@ -287,8 +287,8 @@ BACK TO TOP
 --------------------------------------------------------------------- */
 #toTop {
     position    : fixed;
-    bottom      : 55px;
-    right       : 30px;
+    bottom      : 120px;
+    right       : 28px;
     color       : #31aae2;
     cursor      : pointer;
     display     : none;
@@ -918,7 +918,7 @@ Team
 }
 
 .gallery img {
-    width: 100vw; 
+    width: 100%; 
     flex-shrink: 0; 
     object-fit: cover;
 }
@@ -1162,8 +1162,9 @@ service-icon-style
     }
 .x-accordion .panel .panel-heading a.collapsed {
     color: #969595;
-    background-color: #fff;
+    background-color: #2781e0;
     padding: 12px 30px;
+    color: #fff;
     }
 .x-accordion .panel-default>.panel-heading {
     border-radius: 0px;
@@ -1189,11 +1190,9 @@ service-icon-style
  -----------------------*/
 /*.tabOne {}*/
 .tabOne .nav-tabs {
-    border: 1px solid #eee;
     border-bottom: none;
     }
 .tabOne .nav-tabs.nav-justified li {
-    border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
     }
 .tabOne .nav-tabs.nav-justified li.active {
@@ -1214,9 +1213,9 @@ service-icon-style
 .tabOne .nav-tabs.nav-justified>.active>a,
 .tabOne .nav-tabs.nav-justified>.active>a:focus,
 .tabOne .nav-tabs.nav-justified>.active>a:hover {
-    border: 0;
-    background-color: transparent;
-    color: #31aae2;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #2781e0;
+    color: #fafafa;
     }
 
 /*media query*/
@@ -1270,6 +1269,10 @@ service-icon-style
 .footer {
     background : #313131;
     }
+
+.footer p{
+    margin: 0px !important;
+}
 
 .footer .footer-block {
     border-right : 1px solid #3a3a3a;
@@ -1362,6 +1365,7 @@ service-icon-style
     color            : #6b6b6b;
     padding          : 20px 0;
     padding-bottom: 70px;
+    text-align: center;
     }
 
 .footer .copyright-section .copytext {
@@ -1493,6 +1497,7 @@ service-icon-style
 
     #logo-marquee{
         background-color: rgba(0, 0, 0, 0);
+        padding: 5px;
     }
     
 
@@ -1503,10 +1508,16 @@ service-icon-style
     }
     
     .marquee-content img {
-        height: 50px; 
+        height: 35px; 
         margin: 0 10px;
     }
     
+    @media (max-width : 480px){
+        .marquee-content img{
+            height: 50px;
+            width: 700px;
+        }
+    }
     /* Keyframes for the marquee animation */
     @keyframes marquee {
         0% {
@@ -1518,11 +1529,19 @@ service-icon-style
     }
 
     .ptb-100{
-        padding-top: 50px;
-        padding-bottom: 15px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
     article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
         display: block;
+    }
+    #services {
+        height: 500px;
+        width: 500px;
+        box-shadow: .5px .5px 12px black;
+        margin: 20px 40px;
+        padding: 30px;
+    
     }
 
 .service-text{
@@ -1584,8 +1603,8 @@ Banner style
 } 
 }
   
-/*--------End of bann
-er syle-------*/
+/*--------End of banner syle-------*/
+
 /*Media queries used to cahnge line size for smaller screens*/
 @media (max-width : 550px){
     .service-line{
@@ -1594,7 +1613,7 @@ er syle-------*/
 }
 .main-wel-text{
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     padding-left: 30px;
 }
 
@@ -1664,7 +1683,7 @@ Popup Content
   --------------------*/
   .contact-us-icon {
     position: fixed;
-    bottom: 7px; 
+    bottom: 60px; 
     right: 20px;   
     background-color: #007BFF;
     color: white;
@@ -1679,7 +1698,8 @@ Popup Content
   }
 
   .contact-us-icon:hover {
-    background-color: #0056b3;
+    background-color: #fff;
+    color: #007BFF;
   }
 
   .contact-us-icon span {
@@ -1706,7 +1726,7 @@ Popup Content
         padding: 20px;
         background-color: #ffffff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        margin: 100px;
       }
 
       .prod-intro h1 {
@@ -1730,7 +1750,8 @@ Popup Content
         text-align: center;
         transition: all 0.3s ease;
         box-sizing: border-box;
-        height: 400px;
+        height: 450px;
+        padding: 20px;
       }
 
       .prod-card img {
@@ -1829,6 +1850,7 @@ Popup Content
         height: 150px;
         width: 400px;
         padding: 2%;
+        object-fit: contain;
       }
 
       /* ------ End of product page style -----*/
@@ -1871,7 +1893,7 @@ Contact Form style
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 100px 20px;
 }
 .contact-form {
     background-color: #ffffff;
@@ -1916,10 +1938,10 @@ Contact Form style
     height: 150px;
 }
 .form-group button {
-    background-color: #00a859;
-    color: #ffffff;
+    background: linear-gradient(45deg, yellow, steelblue);
+    color: #333;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 36px;
     font-size: 1em;
     font-weight: bold;
     border-radius: 5px;
@@ -1945,28 +1967,36 @@ Contact Form style
 /*-----End of form style-----*/
 
 /*------Mobile Product style ------*/
-.logos {
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.logo {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background-color: #ffffff;
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.logos img {
+.logo img {
     max-width: 150px;
-    margin: 20px;
-    flex: 1 1 150px; 
+    max-height: 100px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .logos {
-        flex-direction: column;
-        align-items: center;
-        margin: 35px;
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    #topimage{
-        margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: 1fr;
     }
 }
