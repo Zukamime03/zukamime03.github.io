@@ -700,10 +700,19 @@ Shortcode Content
     }
     }
 
-@media (max-width : 767px) {
+@media (max-width: 990px) {
     .hero-slide .carousel-caption {
         transform   : translateY(25%);
+        bottom: 45%;
     }
+    .hero-slide .carousel-caption h1 {
+        font-size: 3.2em;
+    }
+    .hero-slide .carousel-caption p {
+        font-size: 2.4rem;
+    }
+}
+@media (max-width : 767px) {
     .hero-slide .carousel-caption p {
         font-size: 1.4rem;
     }
@@ -2050,7 +2059,7 @@ Contact Form style
 }
 @media (max-width: 795px){
     .prod-card{
-        height: 690PX;
+        height: 100%;
     }
 }
 
@@ -2077,6 +2086,12 @@ Contact Form style
 @media (min-width: 992px) {
     .col-md-3 {
         width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    .logo-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
