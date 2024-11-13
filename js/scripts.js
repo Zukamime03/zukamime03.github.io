@@ -129,14 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('scroll', function() {
     var marquee = document.getElementById('logo-marquee');
     var scrollPosition = window.scrollY;
-    var piclogo = document.getElementById('pic-logo')
-
+    
     // Calculate the color based on scroll position
     var color;
 
     if (scrollPosition < 180) { // Change color until a certain scroll position (adjust as needed)
         color = 'rgba(0, 0, 0, 0.0)'; // Transparent color
-        piclogo.size
+      
     } else {
         color = 'rgba(45, 45, 45, 1)';
     }
@@ -153,7 +152,7 @@ function scrollFunction() {
     var image = document.getElementById("pic-logo");
     var screenWidth = window.innerWidth;
 
-    if (screenWidth > 770) {
+    if (screenWidth > 995) {
         if (document.documentElement.scrollTop < 180) {
             image.style.width = "290px";
             image.style.height = "190px";
