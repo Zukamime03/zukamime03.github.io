@@ -129,20 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('scroll', function() {
     var marquee = document.getElementById('logo-marquee');
     var scrollPosition = window.scrollY;
-    var piclogo = document.getElementById('pic-logo')
-
+    
     // Calculate the color based on scroll position
     var color;
 
     if (scrollPosition < 180) { // Change color until a certain scroll position (adjust as needed)
-        color = 'rgba(0, 0, 0, 0)'; // Transparent color
-        piclogo.size
+        color = 'rgba(0, 0, 0, 0.0)'; // Transparent color
+      
     } else {
         color = 'rgba(45, 45, 45, 1)';
     }
-
-    if (screenHeight < '')
-
     // Update background color
     marquee.style.backgroundColor = color;
 
@@ -156,10 +152,10 @@ function scrollFunction() {
     var image = document.getElementById("pic-logo");
     var screenWidth = window.innerWidth;
 
-    if (screenWidth > 770) {
+    if (screenWidth > 995) {
         if (document.documentElement.scrollTop < 180) {
-            image.style.width = "305px";
-            image.style.height = "200px";
+            image.style.width = "290px";
+            image.style.height = "190px";
         } else {
             image.style.width = "80px";
             image.style.height = "50px";
@@ -213,11 +209,31 @@ $(document).ready(function() {
     $('.searchable').select2();
 });
 
-function toggleListbox(show) {
+
+function toggleListbox() {
     const listboxContainer = document.getElementById('listboxContainer');
-    if (show) {
+    const listboxopen = document.getElementById('openlist');
+    const listboxclose = document.getElementById('closelist');
+
+    if (listboxopen.checked = true) {
         listboxContainer.style.display = 'block';
-    } else {
+    } 
+
+    else if (listboxopen.checked = false){
         listboxContainer.style.display = 'none';
     }
 }
+ 
+
+// const radios = document.querySelectorAll('input[name="inquiry"]');
+// const element = document.getElementById('listboxContainer');
+
+// radios.forEach(radio => {
+//   radio.addEventListener('change', () => {
+//     if (document.querySelector('input[name="inquiry"]:checked').value === "show") {
+//       element.style.display = "block"; 
+//     } else {
+//       element.style.display = "none";
+//     }
+//   });
+// });
